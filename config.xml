@@ -1,18 +1,15 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="mobile.contacts.lab" version="0.0.1"
 	xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-	<name>mobile contacts lab</name>
+	<name>Mobile Contacts</name>
 	<description>
-		A sample Apache Cordova application that responds to the
-		deviceready
-		event.
+		Workshop for Web Mobile Apps 
 	</description>
-	<author href="http://www.eclipse.org/thym" email="thym-dev@eclipse.org">
-		Eclipse.org -
-		Thym
+	<author href="" email="">
+		BFK
 	</author>
 
-	<content src="index08.html" />
+	<content src="index.html" />
 	<!-- Whitelist configuration. Refer to https://cordova.apache.org/docs/en/edge/guide_appdev_whitelist_index.md.html -->
 	<plugin name="cordova-plugin-whitelist" spec="1" />
 	<access origin="*" />
