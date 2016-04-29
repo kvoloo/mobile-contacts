@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<head>
+<meta name="format-detection" content="telephone=no">
+<meta name="msapplication-tap-highlight" content="no">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport"
+	content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />
+<link rel="stylesheet" href="css/jquery.mobile-1.4.5.min.css">
+<script src="js/jquery-1.12.3.js"></script>
+<script src="js/jquery.mobile-1.4.5.js"></script>
+
+<title>Mobile Contacts</title>
+</head>
+
+<body>
+	<div data-role="page" id="home">
+		<div data-role="panel" id="sidePanel">
+			<h2>Side menu</h2>
+			<ul data-role="listview" id="listview-1">
+				<li><a href="#home">HOME</a></li>
+				<li><a href="#static">STATIC</a></li>
+				<li><a href="#remote">REMOTE</a></li>
+				<li><a href="#local">LOCAL</a></li>
+				<li><a href="#addContact">NEW CONTACT</a></li>
+			</ul>
+		</div>
+		<div data-role="header">
+			<a href="#sidePanel" class="ui-btn ui-icon-bars ui-btn-icon-notext">Side
+				menu</a>
+			<h1>Mobile Contacts</h1>
+			<a href="#mobileInfo" class="ui-btn ui-icon-info ui-btn-icon-notext">Side
+				menu</a>
+		</div>
+		<div data-role="main" class="ui-content">
+			<h1>Home Page</h1>
+			<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
+				do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+				enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+				ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+				reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+				pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+				culpa qui officia deserunt mollit anim id est laborum.</p>
+			<ul>
+				<li><a href="#static">to Static Contacts</a></li>
+				<li><a href="#remote">to Remote Contacts</a></li>
+				<li><a href="#local">to Local Contacts</a></li>
+				<li><a href="#addContact">to Add New Contact</a></li>
+			</ul>
+
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar" id="navbar-1">
+				<ul>
+					<li><a href="#home" data-icon="home">HOME</a></li>
+					<li><a href="#static" data-icon="bars">STATIC</a></li>
+					<li><a href="#remote" data-icon="cloud">REMOTE</a></li>
+					<li><a href="#local" data-icon="phone">LOCAL</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div data-role="page" id="static">
+		<div data-role="header">
+			<h1>Static Contacts</h1>
+		</div>
+		<div data-role="main" class="ui-content">
+			<table data-role="table" class="ui-responsive" id="static_contacts">
+				<thead>
+					<tr>
+						<th>ID</th>
+						<th>Name</th>
+						<th>Phone</th>
+						<th>Email</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1</td>
+						<td>Alfreds Futterkiste</td>
+						<td>12 345 568</td>
+						<td>alfred@example.com</td>
+					</tr>
+					<tr>
+						<td>2</td>
+						<td>Antonio Moreno</td>
+						<td>12 345 567</td>
+						<td>antonio@example.com</td>
+					</tr>
+					<tr>
+						<td>3</td>
+						<td>Around Horn</td>
+						<td>12 345 566</td>
+						<td>around@example.com</td>
+					</tr>
+					<tr>
+						<td>4</td>
+						<td>Berglunds Snabbköp</td>
+						<td>12 345 565</td>
+						<td>berglund@example.com</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar" id="navbar-2">
+				<ul>
+					<li><a href="#home" data-icon="home">HOME</a></li>
+					<li><a href="#static" data-icon="bars">STATIC</a></li>
+					<li><a href="#remote" data-icon="cloud">REMOTE</a></li>
+					<li><a href="#local" data-icon="phone">LOCAL</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div data-role="page" id="remote">
+		<div data-role="header">
+			<h1>Remote Contacts</h1>
+		</div>
+		<div data-role="main" class="ui-content">
+			<div data-role="collapsible-set" id="remoteContactList"
+				data-collapsed-icon="user" data-expanded-icon="carat-u"
+				data-iconpos="left" data-inset="false">
+				<div data-role="collapsible">
+					<h4>NAME SURNAME</h4>
+					<p>
+						phone<br />e-mail
+					</p>
+				</div>
+			</div>
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar" id="navbar-3">
+				<ul>
+					<li><a href="#home" data-icon="home">HOME</a></li>
+					<li><a href="#static" data-icon="bars">STATIC</a></li>
+					<li><a href="#remote" data-icon="cloud">REMOTE</a></li>
+					<li><a href="#local" data-icon="phone">LOCAL</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div data-role="page" id="local">
+		<div data-role="header">
+			<h1>Local Contacts</h1>
+		</div>
+		<div data-role="main" class="ui-content">
+			<a href="" id="btnFetchContacts" class="ui-btn ui-mini ui-corner-all">Fetch contacts</a>
+			<div id="debug"></div>
+			<form class="ui-filterable">
+				<input data-type="search" id="searchForListview-1"/>
+			</form>
+			<ul data-role="listview" id="deviceContacts" data-filter="true" data-input="#searchForListview-1">
+				<li>Item 1</li>
+				<li>Item 2</li>
+				<li>Item 3</li>
+			</ul>		
+
+		</div>
+		<div data-role="footer" data-position="fixed">
+			<div data-role="navbar" id="navbar-4">
+				<ul>
+					<li><a href="#home" data-icon="home">HOME</a></li>
+					<li><a href="#static" data-icon="bars">STATIC</a></li>
+					<li><a href="#remote" data-icon="cloud">REMOTE</a></li>
+					<li><a href="#local" data-icon="phone">LOCAL</a></li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+	<div data-role="page" id="addContact" data-dialog="true">
+		<div data-role="header">
+			<h1>Add New Contact</h1>
+		</div>
+		<div data-role="main" class="ui-content">
+			<form id="contactForm">
+				<label for="id">ID:</label> <input name="id" id="id"
+					data-clear-btn="true" value="" placeholder="Insert ID"
+					required="true" type="number" /> <label for="name">Name:</label> <input
+					name="name" id="name" data-clear-btn="true" value=""
+					placeholder="Insert name" required="true" type="text" /> <label
+					for="phone">Phone number:</label> <input name="phone" id="phone"
+					data-clear-btn="true" value="" placeholder="Insert number"
+					required="true" type="text" /> <label for="email">E-mail:</label>
+				<input name="email" id="email" data-clear-btn="true" value=""
+					placeholder="Insert address" required="true" type="email" />
+				<div
+					class="ui-input-btn ui-btn ui-icon-check ui-btn-icon-left ui-mini ui-btn-inline ui-corner-all"
+					style="text-align: right;">
+					SUBMIT <input data-enhanced="true" type="submit" value="Submit"
+						id="submitContact" />
+				</div>
+			</form>
+		</div>
+		<div data-role="footer"></div>
+	</div>
+
+
+	<div data-role="page" id="mobileInfo" data-dialog="true">
+		<div data-role="header">
+			<h1>Mobile Info</h1>
+		</div>
+		<div data-role="main" class="ui-content">
+			<div class="app">
+				<h1>Apache Cordova application powered by Eclipse Thym</h1>
+				<div id="deviceready" class="blink">
+					<p class="event listening">Connecting to Device</p>
+					<p class="event received">Device is Ready</p>
+				</div>
+			</div>
+		</div>
+		<div data-role="footer"></div>
+	</div>
+	<script type="text/javascript" src="phonegap.js"></script>
+	<script type="text/javascript" src="js/index08.js"></script>
+	<script type="text/javascript" src="js/my-js.js"></script>
+
+</body>
+</html>
